@@ -46,25 +46,19 @@ int main(void) {
 
     node_t * head = NULL;
     head = malloc(sizeof(node_t));
-
-    if (head == NULL) {
-        return 1;
+    printf("Filling  the list\n");
+    int i = 1;
+    while i < 10{
+        int per = 0;
+        scanf("%d",&per);
+        push_start(&head,per);
+        i++;
     }
-
-    head->val = 1;
-    head->next = malloc(sizeof(node_t));
-    head->next->val = 2;
-    head->next->next = malloc(sizeof(node_t));
-    head->next->next->val = 3;
-    head->next->next->next = malloc(sizeof(node_t));
-    head->next->next->next->val = 4;
-    head->next->next->next->next = NULL;
     
-    printf("\nPrint list\n\n");
+    printf("Print list\n\n");
     print_list(head);
-    printf("\nDelete last element\n\n");
+    printf("Delete last element\n\n");
     pop(&head);
     print_list(head);    
-    
     return 0;
 }
