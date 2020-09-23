@@ -127,39 +127,5 @@ int main() {
     head->next->next->next->val = 4;
     head->next->next->next->next = NULL;
 
-    // print current list
-    print_list(head);
-    printf("\nList finished, adding new value 5...\n\n");
-    
-    // add "5" to the end
-    push(head, 5);
-
-    // print updated list
-    print_list(head);
-    printf("\nList finished, adding new value to begin of the list...\n\n");
-
-    // add 0 to start
-    push_start(&head, 0);    
-
-    // print updated list
-    print_list(head);
-
-    // pop 1st element
-    printf("\nRemoving 1th element...\n\n");
-    pop(&head);
-
-    // print updated list
-    print_list(head); 
-
-    printf("\nRemoving last item...\n\n");
-    remove_last(head);
-
-    print_list(head);
-
-    printf("\nRemoving item with index 2...\n\n");
-    remove_by_index(&head, 2);
-
-    print_list(head);
-
     return 0;
 }
